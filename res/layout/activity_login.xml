@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ACT_Login" >
+
+    <fragment
+        android:id="@+id/fra_titlebar"
+        android:name="com.sml.myoa.view.FRA_Title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <fragment
+        android:id="@+id/fra_login_content"
+        android:name="com.sml.myoa.view.FRA_Login_Content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fra_titlebar" />
+
+</RelativeLayout>
