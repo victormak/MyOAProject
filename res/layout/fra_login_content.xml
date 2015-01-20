@@ -1,31 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:id="@+id/login_page"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_blue"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:tag="login_page" >
+
+    <!-- account input -->
 
     <EditText
         android:id="@+id/et_login_id"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:inputType="text" 
-        android:hint="@string/login_id_hint"/>
-    
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_dividing_line_selector"
+        android:digits="1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM-()+@."
+        android:drawableLeft="@drawable/login_account_selector"
+        android:drawablePadding="9dp"
+        android:ems="10"
+        android:gravity="left|center_vertical"
+        android:hint="@string/login_hint_account"
+        android:inputType="textNoSuggestions"
+        android:paddingBottom="9dp"
+        android:paddingLeft="5dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:tag="login_edit_account"
+        android:textColor="@color/pinkandwhite"
+        android:textColorHint="@color/transparent_fifty"
+        android:textSize="@dimen/font_size3" />
+
+    <!-- password input -->
+
     <EditText
         android:id="@+id/et_login_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/login_dividing_line_selector"
+        android:drawableLeft="@drawable/login_password_selector"
+        android:drawablePadding="9dp"
+        android:ems="10"
+        android:gravity="left|center"
+        android:hint="@string/login_hint_password"
+        android:inputType="textNoSuggestions|textPassword"
+        android:maxLength="16"
+        android:paddingBottom="9dp"
+        android:paddingLeft="5dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:tag="login_edit_password"
+        android:text=""
+        android:textColor="@color/pinkandwhite"
+        android:textColorHint="@color/transparent_fifty"
+        android:textSize="@dimen/font_size3" />
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:inputType="textPassword" 
-        android:hint="@string/login_password_hint"/>
-    
-    <Button android:id="@+id/btn_login"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:text="@string/remember_password" />
+         <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:text="@string/auto_login" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:text="@string/login_title"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/title_bar_bg"
-        />
+        android:layout_height="40dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_login_button_selector"
+        android:clickable="true"
+        android:tag="login_btn_login"
+        android:text="@string/login"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/font_size4" />
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/forget_password"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size3" />
 
 </LinearLayout>
