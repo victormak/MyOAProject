@@ -2,6 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    
+
+    <com.sml.myoa.widget.OATitleBarView
+        xmlns:title="http://schemas.android.com/apk/res/com.sml.myoa"
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bar_bg"
+        title:leftIcon="@drawable/login_account"
+        title:rightLabel="@string/login" >
+    </com.sml.myoa.widget.OATitleBarView>
 
 </RelativeLayout>
